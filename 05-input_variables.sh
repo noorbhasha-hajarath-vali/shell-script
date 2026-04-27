@@ -1,9 +1,6 @@
 #!/bin/bash
 
-echo "Enter your first name"
-read first_name
+echo "Enter Your Pin Number"
+read -s pin_number # shows the pin you enter
 
-echo "Enter your 2nd name"
-read second_name
-
-echo "Hi, ${first_name} ${second_name}, welcome to Shell Script"
+echo "Hi, your pin number is: ${pin_number}"
