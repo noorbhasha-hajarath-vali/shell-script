@@ -1,6 +1,6 @@
 #!/bin/bash
 
 echo "Enter Your Pin Number"
-read -s pin_number # shows the pin you enter
+read -s pin_number # -s hides the pin you enter
 
 echo "Hi, your pin number is: ${pin_number}"
