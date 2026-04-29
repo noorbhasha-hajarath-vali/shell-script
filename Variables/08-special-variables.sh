@@ -6,6 +6,7 @@
 # sh file-name Vali Noor Basha Hajarath --> it will show the arguements
 echo "all variables passed through this script: $@"
 echo ""
+
 echo "all variables passed through this script: $*"
 echo ""
 
