@@ -9,6 +9,7 @@ echo ""
 echo "all variables passed through this script: $*"
 echo ""
 
+# Total number of Arguments
 echo "Number of Arguments: $#"
 echo ""
 
@@ -36,6 +37,11 @@ sleep 20 &
 echo ""
 # Process ID of the current executed script
 echo "Process ID of last command run in background is: $!"
+
+
+echo ""
+# Last command status
+echo "Last command status: $?"
 
 
 
