@@ -4,4 +4,4 @@
 
 DATE=$(date +%Y-%m-%d)
 
-echo "He born today, i.e. ${DATE}"
+echo "My cousin born today, i.e. ${DATE}"
