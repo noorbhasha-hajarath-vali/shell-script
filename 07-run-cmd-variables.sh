@@ -2,6 +2,6 @@
 
 # run commands within the variables
 
-YEAR=$(date +%Y)
+DATE=$(date +%Y-%m-%d)
 
-echo "He born in the year ${YEAR}"
+echo "He born today, i.e. ${DATE}"
