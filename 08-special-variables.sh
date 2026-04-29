@@ -28,6 +28,8 @@ echo ""
 # Process ID of the current executed script
 echo "Process ID of the running script: $$"
 
+sleep 20 &
+
 echo ""
 # Process ID of the current executed script
 echo "Process ID of last command run in background is: $!"
