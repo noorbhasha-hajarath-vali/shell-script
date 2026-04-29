@@ -9,6 +9,9 @@ echo ""
 echo "all variables passed through this script: $*"
 echo ""
 
+echo "Number of Arguments: $#"
+echo ""
+
 # shows script File name you are executing
 echo "Script name: $0"
 echo ""
