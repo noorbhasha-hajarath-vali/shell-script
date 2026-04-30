@@ -12,11 +12,11 @@ echo "Total is: ${SUM}"
 
 # String
 
-FRUITS=("Apple", "Orange", "Mango", "Banana")
+FRUITS=("Apple" "Orange" "Mango" "Banana")
 
 echo "Fruits List: ${FRUITS[@]}"
 echo "Fruits List: ${FRUITS[0]}"
 echo "Fruits List: ${FRUITS[2]}"
 
-# if we print non existing value, then it will not print anything
+# if we print non existing value Ex: 5, then it will not print anything
 echo "Fruits List: ${FRUITS[5]}"
