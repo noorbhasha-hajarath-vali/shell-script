@@ -17,3 +17,4 @@ FRUITS=("Apple", "Orange", "Mango", "Banana")
 echo "Fruits List: ${FRUITS[@]}"
 echo "Fruits List: ${FRUITS[0]}"
 echo "Fruits List: ${FRUITS[2]}"
+echo "Fruits List: ${FRUITS[5]}"
