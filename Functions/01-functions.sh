@@ -18,7 +18,6 @@ VALIDATION () {
 
 INSTALLED () {
     if [$? -ne 0]; then
-        echo "$2 package not yet installed, installing now"
         dnf install $1 -y
         VALIDATION $1
 
