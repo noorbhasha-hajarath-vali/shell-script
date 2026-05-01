@@ -25,7 +25,7 @@ INSTALLED () {
     fi
 }
 
-dnf list installed httpd 
+dnf list installed httpd
 INSTALLED $? httpd
 VALIDATION $? httpd
 
