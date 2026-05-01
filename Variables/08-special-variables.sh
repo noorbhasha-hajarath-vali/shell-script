@@ -41,8 +41,5 @@ echo "Process ID of last command run in background is: $!"
 
 
 echo ""
-# Last command status
-echo "Last command status: $?"
-
-
-
+# Exist status of previous command
+echo "Previous Command Exist status: $?"
