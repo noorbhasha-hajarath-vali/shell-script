@@ -8,7 +8,7 @@ if [ $USER_ID -ne 0 ]; then
 fi
 
 VALIDATION () {
-    if [$1 -ne 0]; then
+    if [$? -ne 0]; then
         echo "ERROR: $2 package installation Failed"
         exit 1
     else
@@ -17,22 +17,21 @@ VALIDATION () {
 }
 
 INSTALLED () {
-    if [$1 -ne 0]; then
+    if [$? -ne 0]; then
         echo "$2 package not yet installed, installing now"
-        dnf install $2 -y
+        dnf install $1 -y
+        VALIDATION $1
+
     else
         echo "$2 Already Installed"
     fi
 }
 
 dnf list installed httpd
-INSTALLED $? httpd
-VALIDATION $? httpd
+INSTALLED httpd
 
 dnf list installed nginx
-INSTALLED $? nginx
-VALIDATION $? nginx
+INSTALLED nginx
 
 dnf list installed docker
-INSTALLED $? docker
-VALIDATION $? docker
+INSTALLED docker
