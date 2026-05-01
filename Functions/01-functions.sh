@@ -16,13 +16,22 @@ VALIDATION () {
     fi
 }
 
-dnf install httpd -y
+INSTALLED () {
+    if [$1 -ne 0]; then
+        echo "$2 package not yet installed, installing now"
+        dnf install $2 -y
+    else
+        echo "$2 Already Installed"
+}
+
+dnf list installed httpd 
+INSTALLED $? httpd
 VALIDATION $? httpd
 
-
-dnf install nginx -y
+dnf list installed nginx
+INSTALLED $? nginx
 VALIDATION $? nginx
 
-dnf install docker -y
-
+dnf list installed docker
+INSTALLED $? docker
 VALIDATION $? docker
