@@ -17,26 +17,18 @@ VALIDATE(){
     fi
 }
 
-dnf list installed tree &>/dev/null
-if [ $? -ne 0 ]; then
-    echo "tree not installed, installing now"
-    VALIDATE tree
-else
-    echo "tree already installed"
-fi
+INSTALLATION(){
+    PKG_NAME=$1
 
-dnf list installed nginx &>/dev/null
-if [ $? -ne 0 ]; then
-    echo "nginx not installed, installing now"
-    VALIDATE nginx
-else
-    echo "nginx already installed"
-fi
+    dnf list installed $PKG_NAME &>/dev/null
+    if [ $? -ne 0 ]; then
+        echo "$PKG_NAME not installed, installing now"
+        VALIDATE $PKG_NAME
+    else
+        echo "$PKG_NAME already installed"
+    fi
+}
 
-dnf list installed docker &>/dev/null
-if [ $? -ne 0 ]; then
-    echo "docker not installed, installing now"
-    VALIDATE docker
-else
-    echo "docker already installed"
-fi
+INSTALLATION tree
+INSTALLATION nginx
+INSTALLATION docker
