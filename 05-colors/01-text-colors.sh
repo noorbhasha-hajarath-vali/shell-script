@@ -9,7 +9,7 @@ CYAN="\e[36m"
 WHITE="\e[37m"
 RESET="\e[0m"
 
-echo -e "$BLACK this is the Red color $RESET"
+echo -e "$BLACK this is the Black color $RESET"
 echo -e "$RED this is the Red color $RESET"
 echo -e "$GREEN this is the GREEN color $RESET"
 echo -e "$YELLOW this is the YELLOW color $RESET"
