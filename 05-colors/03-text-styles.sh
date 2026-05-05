@@ -8,7 +8,7 @@ REVERSE="\e[7m"
 HIDDEN="\e[8m"
 RESET="\e[0m"
 
-echo -e "$BOLD this is bold text $RESET"
+printf "$BOLD this is bold text $RESET"
 echo -e "$DIM this is bold text $RESET"
 echo -e "$UNDERLINE this is bold text $RESET"
 echo -e "$BLINK this is bold text $RESET"
