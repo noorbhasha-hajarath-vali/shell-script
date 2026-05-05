@@ -17,7 +17,7 @@ VALIDATE(){
     fi
 }
 
-dnf list installed tree
+dnf list installed tree &>/dev/null
 if [ $? -ne 0 ]; then
     echo "tree not installed, installing now"
     VALIDATE tree
@@ -25,7 +25,7 @@ else
     echo "tree already installed"
 fi
 
-dnf list installed nginx
+dnf list installed nginx &>/dev/null
 if [ $? -ne 0 ]; then
     echo "nginx not installed, installing now"
     VALIDATE nginx
@@ -33,7 +33,7 @@ else
     echo "nginx already installed"
 fi
 
-dnf list installed docker
+dnf list installed docker &>/dev/null
 if [ $? -ne 0 ]; then
     echo "docker not installed, installing now"
     VALIDATE docker
