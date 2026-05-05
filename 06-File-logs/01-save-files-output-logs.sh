@@ -7,13 +7,13 @@ LOG_DIR="/var/log/shell-script"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1) # deleting .sh extension
 LOG_FILE="$LOG_DIR/$SCRIPT_NAME.log"
 
-mkdir -p "$LOG_DIR"
-echo "Script started executing at $(date)"  | tee -a "$LOG_FILE"
-
 if [ ${USER_ID} -ne 0 ]; then
     echo "Error: User doesn't have root privileges, please run with sudo" | tee -a "$LOG_FILE"
     exit 1
 fi
+
+mkdir -p "$LOG_DIR"
+echo "Script started executing at $(date)"  | tee -a "$LOG_FILE"
 
 VALIDATE(){
     dnf install "$1" -y &>>"$LOG_FILE"
