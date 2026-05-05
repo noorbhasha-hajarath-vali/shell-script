@@ -9,7 +9,7 @@ fi
 
 dnf install tree -y
 
-if [$? -ne 0]; then
+if [ $? -ne 0 ]; then
     echo "Error: tree package installation failed, retry later"
     exit 1
 else
@@ -18,7 +18,7 @@ fi
 
 dnf install nginx -y
 
-if [$? -ne 0]; then
+if [ $? -ne 0 ]; then
     echo "Error: nginx package installation failed, retry later"
     exit 1
 else
@@ -27,9 +27,9 @@ fi
 
 dnf install docker -y
 
-if [$? -ne 0]; then
-    echo "Error: git package installation failed, retry later"
+if [ $? -ne 0 ]; then
+    echo "Error: docker package installation failed, retry later"
     exit 1
 else
-    echo "Success: git package installed successfully"
+    echo "Success: docker package installed successfully"
 fi
