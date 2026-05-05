@@ -7,7 +7,7 @@ if [ ${USER_ID} -ne 0 ]; then
     exit 1
 fi
 
-dnf remove tree -y
+dnf install tree -y
 
 if [$? -ne 0]; then
     echo "Error: tree package installation failed, retry later"
@@ -16,7 +16,7 @@ else
     echo "Success: tree package installed successfully"
 fi
 
-dnf remove nginx -y
+dnf install nginx -y
 
 if [$? -ne 0]; then
     echo "Error: nginx package installation failed, retry later"
@@ -25,7 +25,7 @@ else
     echo "Success: nginx package installed successfully"
 fi 
 
-dnf remove git -y
+dnf install docker -y
 
 if [$? -ne 0]; then
     echo "Error: git package installation failed, retry later"
