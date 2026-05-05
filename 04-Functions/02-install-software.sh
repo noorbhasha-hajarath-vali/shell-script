@@ -25,11 +25,11 @@ else
     echo "Success: nginx package installed successfully"
 fi 
 
-dnf install httpd -y
+dnf install git -y
 
 if [$? -ne 0]; then
-    echo "Error: nginx package installation failed, retry later"
+    echo "Error: git package installation failed, retry later"
     exit 1
 else
-    echo "Success: nginx package installed successfully"
+    echo "Success: git package installed successfully"
 fi
