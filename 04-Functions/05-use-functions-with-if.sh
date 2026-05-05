@@ -17,8 +17,26 @@ VALIDATE(){
     fi
 }
 
-VALIDATE tree
+dnf list installed tree
+if [ $? -ne 0 ]; then
+    echo "tree not installed, installing now"
+    VALIDATE tree
+else
+    echo "tree already installed"
+fi
 
-VALIDATE nginx
+dnf list installed nginx
+if [ $? -ne 0 ]; then
+    echo "nginx not installed, installing now"
+    VALIDATE nginx
+else
+    echo "nginx already installed"
+fi
 
-VALIDATE git
+dnf list installed docker
+if [ $? -ne 0 ]; then
+    echo "docker not installed, installing now"
+    VALIDATE docker
+else
+    echo "docker already installed"
+fi
