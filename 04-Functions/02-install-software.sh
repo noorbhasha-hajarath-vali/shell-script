@@ -11,25 +11,7 @@ dnf install tree -y
 
 if [ $? -ne 0 ]; then
     echo "Error: tree package installation failed, retry later"
-    exit 1
+    # exit 1
 else
     echo "Success: tree package installed successfully"
-fi
-
-dnf install nginx -y
-
-if [ $? -ne 0 ]; then
-    echo "Error: nginx package installation failed, retry later"
-    exit 1
-else
-    echo "Success: nginx package installed successfully"
-fi 
-
-dnf install docker -y
-
-if [ $? -ne 0 ]; then
-    echo "Error: docker package installation failed, retry later"
-    exit 1
-else
-    echo "Success: docker package installed successfully"
 fi
