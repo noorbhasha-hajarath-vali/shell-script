@@ -1,6 +1,20 @@
 #!/bin/bash
 
 BG_BLACK="\e[40m"
+BG_RED="\e[41m"
+BG_GREEN="\e[42m"
+BG_YELLOW="\e[43m"
+BG_BLUE="\e[44m"
+BG_MAGENTA="\e[45m"
+BG_CYAN="\e[46m"
+BG_WHITE="\e[47m"
 RESET="\e[0m"
 
 echo -e "$BG_BLACK black color background $RESET"
+echo -e "$BG_RED black color background $RESET"
+echo -e "$BG_GREEN black color background $RESET"
+echo -e "$BG_YELLOW black color background $RESET"
+echo -e "$BG_BLUE black color background $RESET"
+echo -e "$BG_MAGENTA black color background $RESET"
+echo -e "$BG_CYAN black color background $RESET"
+echo -e "$BG_WHITE black color background $RESET"
