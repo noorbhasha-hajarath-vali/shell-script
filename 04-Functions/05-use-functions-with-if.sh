@@ -7,21 +7,26 @@ if [ ${USER_ID} -ne 0 ]; then
     exit 1
 fi
 
-INSTALLED_PKG=$(dnf list installed $1)
 
-if [ ${INSTALLED_PKG} -ne 0 ]; then
-    VALIDATE() {
-        dnf install $1 -y
+VALIDATE() {
+    PACKAGE_NAME=$1
+
+    dnf list installed $PACKAGE_NAME &>/dev/null
+
+    if [ $? -ne 0 ]; then
+        echo "$PACKAGE_NAME not installed, installing..."
+    
+        dnf install $PACKAGE_NAME -y
         if [ $? -ne 0 ]; then
-            echo "Error: $1 package installation failed, retry later"
+            echo "Error: $PACKAGE_NAME package installation failed, retry later"
             exit 1
         else
-            echo "Success: $1 package installed successfully"
+            echo "Success: $PACKAGE_NAME package installed successfully"
         fi
-    }
-else
-    echo "Success: $1 package is already exists"
-fi
+    else
+        echo "Success: $PACKAGE_NAME package is already installed"
+    fi
+}
 
 VALIDATE "tree"
 VALIDATE "nginx"
